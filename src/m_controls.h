@@ -106,6 +106,12 @@ extern int key_menu_forward;
 extern int key_menu_confirm;
 extern int key_menu_abort;
 
+//math
+int key_math_answerA;
+int key_math_answerB;
+int key_math_answerC;
+int key_math_answerD;
+
 extern int key_menu_help;
 extern int key_menu_save;
 extern int key_menu_load;

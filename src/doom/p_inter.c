@@ -836,6 +836,13 @@ P_DamageMobj
 	target->momy += FixedMul (thrust, finesine[ang]);
     }
     
+	//pause when hit
+	const boolean didAnswerQuestion = player ? player->didAnswerQuestion : true;
+	if (!didAnswerQuestion) {
+		askQuestion(target, inflictor, source, damage);
+		return;
+	}
+
     // player specific
     if (player)
     {
@@ -920,4 +927,3 @@ P_DamageMobj
     }
 			
 }
-

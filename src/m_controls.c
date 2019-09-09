@@ -22,6 +22,8 @@
 #include "m_config.h"
 #include "m_misc.h"
 
+#include "math_question.h"
+
 //
 // Keyboard controls
 //
@@ -157,6 +159,13 @@ int key_menu_back      = KEY_BACKSPACE;
 int key_menu_forward   = KEY_ENTER;
 int key_menu_confirm   = 'y';
 int key_menu_abort     = 'n';
+
+
+//math
+int key_math_answerA = KEY_ANSWERA;
+int key_math_answerB = KEY_ANSWERB;
+int key_math_answerC = KEY_ANSWERC;
+int key_math_answerD = KEY_ANSWERD;
 
 int key_menu_help      = KEY_F1;
 int key_menu_save      = KEY_F2;

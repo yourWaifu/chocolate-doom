@@ -59,7 +59,6 @@
 
 #include "m_menu.h"
 
-
 extern patch_t*		hu_font[HU_FONTSIZE];
 extern boolean		message_dontfuckwithme;
 
@@ -1620,8 +1619,9 @@ boolean M_Responder (event_t* ev)
     {
 	if (messageNeedsInput)
         {
-            if (key != ' ' && key != KEY_ESCAPE
-             && key != key_menu_confirm && key != key_menu_abort)
+            if (key != KEY_ESCAPE
+             && key != key_menu_confirm && key != key_menu_abort
+				&& key != key_math_answerA && key != key_math_answerB && key != key_math_answerC && key != key_math_answerD)
             {
                 return false;
             }
@@ -1955,6 +1955,10 @@ void M_Drawer (void)
     // Horiz. & Vertically center string and print it.
     if (messageToPrint)
     {
+	
+		V_DrawPatchDirect(0, 0,
+			W_CacheLumpName(DEH_String(getQuestionImage(getQuestionNum())), PU_CACHE));
+		
 	start = 0;
 	y = SCREENHEIGHT/2 - M_StringHeight(messageString) / 2;
 	while (messageString[start] != '\0')

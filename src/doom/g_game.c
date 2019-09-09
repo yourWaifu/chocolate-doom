@@ -1091,6 +1091,7 @@ void G_PlayerReborn (int player)
     players[player].killcount = killcount; 
     players[player].itemcount = itemcount; 
     players[player].secretcount = secretcount; 
+	players[player].didAnswerQuestion = false;
  
     p->usedown = p->attackdown = true;	// don't do anything immediately 
     p->playerstate = PST_LIVE;       
