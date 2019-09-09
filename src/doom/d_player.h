@@ -157,7 +157,9 @@ typedef struct player_s
 
     // True if secret level has been done.
     boolean		didsecret;	
-
+	
+	//doing math
+	boolean		didAnswerQuestion;
 } player_t;
 
 

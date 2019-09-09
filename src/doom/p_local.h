@@ -287,7 +287,6 @@ P_DamageMobj
   mobj_t*	source,
   int		damage );
 
-
 //
 // P_SPEC
 //

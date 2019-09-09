@@ -764,6 +764,8 @@ static void saveg_read_player_t(player_t *str)
 
     // boolean didsecret;
     str->didsecret = saveg_read32();
+
+	str->didAnswerQuestion = false;
 }
 
 static void saveg_write_player_t(player_t *str)
